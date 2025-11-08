@@ -1,0 +1,29 @@
+
+# Secrets & env
+
+*.pem
+
+.env
+
+.venv/
+
+
+
+# Python / Jupyter
+
+__pycache__/
+
+.ipynb_checkpoints/
+
+
+
+# OS
+
+.DS_Store
+
+
+
+# (Laisse cette ligne commentée si tu veux pousser des .tar)
+
+# *.tar
+
