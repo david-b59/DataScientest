@@ -1,0 +1,47 @@
+from code1 import total
+import pytest
+
+
+def test_total():
+
+    #Les use cases :
+
+    """La somme de plusieurs éléments d'une liste doit être correcte"""
+
+    assert(total([1.0, 2.0, 3.0])) == 6.0
+
+
+    """1 - 1 = 0"""
+
+    assert total([1,-1]) == 0
+
+
+    """-1 -1 = -2"""
+
+    assert total([-1,-1]) == -2
+
+
+    #Les edge cases :
+
+    """La somme doit être égal à l'unique élément"""
+
+    assert(total([1.0])) == 1.0
+
+
+    """La somme d'une liste vide doit être 0"""
+
+    assert total([]) == 0
+
+def test_total_raises_type_error_with_int():
+
+    """
+
+    Vérifie que total(1) lève une TypeError
+
+    car on attend un itérable (liste, tuple, etc.), pas un int.
+
+    """
+
+    with pytest.raises(TypeError):
+
+        total(1)
